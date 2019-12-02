@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace HW._02
 {
@@ -13,7 +14,24 @@ namespace HW._02
             // Создаем цикл, который будет конвертировать каждую последующую, начиная с первой, строку в байт
             // Создание файла, с помощью массива байтов.
             // Активация сборщика мусора
-            Console.WriteLine("Hello World!");
+
+            StreamReader textReader = new StreamReader(@"C:\Users\Lex\Desktop\VS Projects\image.txt", true);
+
+            string textReaderResult = textReader.ReadToEnd();
+
+            string[] arrayOfTextResult = textReaderResult.Split(' ');
+
+            byte[] imageBytes = new byte[arrayOfTextResult.Length - 1];
+
+            for (int i = 0; i < arrayOfTextResult.Length - 1; i++)
+            {
+                byte binary = Convert.ToByte(arrayOfTextResult[i], 2);
+                imageBytes[i] = binary;
+            }
+
+            File.WriteAllBytes(@"C:\Users\Lex\Desktop\VS Projects\image.png", imageBytes);
+
+            textReader.Dispose();
         }
     }
 }
