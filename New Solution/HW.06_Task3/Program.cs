@@ -7,7 +7,6 @@ namespace HW._06_Task3
     {
         static void Main(string[] args)
         {
-
             long[] array = new long[100_000_000];
             Random rnd = new Random();
             for(long i = 0; i < array.Length; i++)
@@ -50,9 +49,6 @@ namespace HW._06_Task3
             Console.WriteLine("Operation speed of MS Reverse Method is:");
             Console.WriteLine("{0}h:{1}m:{2}s.{3}ms", ts2.Hours, ts2.Minutes, ts2.Seconds, ts2.Milliseconds);
             Console.ReadKey();
-
-
         }
-
     }
 }
