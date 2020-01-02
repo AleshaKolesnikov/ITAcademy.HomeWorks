@@ -6,7 +6,9 @@ namespace HW._07_Task2
     {
         static void Main(string[] args)
         {
-            string inputString = "ЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙ ЙЙЙЙЙЙЙЙЙ ЙЙЙЙ Й";
+            string inputString = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                                 "Nulla quis cursus ipsum. Nunc maximus, erat sit amet " +
+                                 "consequat aliquam, neque quam porta erat, nec lacinia.";
             Task1(inputString);
             Task2(inputString);
         }
