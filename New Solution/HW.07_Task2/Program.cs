@@ -16,7 +16,8 @@ namespace HW._07_Task2
         }
        
         static void Task1(string theString)
-        {   
+        {
+            Console.WriteLine("Задача №1");
             string[] stringArray = theString.Split(new char[] { ' ' });
             string max = String.Empty;
             for (int i = 0; i < stringArray.Length; i++)
@@ -26,6 +27,7 @@ namespace HW._07_Task2
                     max = stringArray[i];
                 }
             }
+            Console.WriteLine($"Самое длинное слово - {max}");
             string[] newStringArray = new string[stringArray.Length - 1];
             for (int i = 0, j = 0; i < stringArray.Length && j < newStringArray.Length; i++, j++)
             {
@@ -38,13 +40,20 @@ namespace HW._07_Task2
                     j--;
                 }
             }
+            Console.WriteLine("Было:");
+            foreach (string i in stringArray)
+            {
+                Console.Write($"{i} ");
+            }
+            Console.WriteLine("\nСтало:");
             foreach (string i in newStringArray)
             {
-                Console.WriteLine(i);
+                Console.Write($"{i} ");
             }
         }
         static void Task2(string theString)
         {
+            Console.WriteLine("\n\n\nЗадача №2");
             string[] stringArray = theString.Split(' ', StringSplitOptions.RemoveEmptyEntries);
             string max = String.Empty;
             int maxIndex = 0;
@@ -69,16 +78,25 @@ namespace HW._07_Task2
                     minIndex = i;
                 }
             }
+            Console.WriteLine($"Самое длинное слово - {max}");
+            Console.WriteLine($"Самое короткое слово - {min}");
+            Console.WriteLine("Было");
+            foreach (string i in stringArray)
+            {
+                Console.Write($"{i} ");
+            }
             string varIndex = stringArray[maxIndex];
             stringArray[maxIndex] = stringArray[minIndex];
             stringArray[minIndex] = varIndex;
+            Console.WriteLine("\nСтало");
             foreach (string str in stringArray)
             {
-                Console.WriteLine(str);
+                Console.Write($"{str} ");
             }
         }
         static void Task3(string theString)
         {
+            Console.WriteLine("\n\n\nЗадача №3");
             int punctCounter = 0;
             for (int i = 0; i < theString.Length; i++)
             {
@@ -103,6 +121,8 @@ namespace HW._07_Task2
         }
         static void Task4(string theString)
         {
+            Console.WriteLine("\n\n\nЗадача №4");
+            Console.WriteLine("\nСортировка массива:\n");
             string[] stringArray = theString.Split(' ');
             int[] mass = new int[stringArray.Length];
             for (int i = 0; i < mass.Length; i++)
