@@ -9,9 +9,10 @@ namespace HW._07_Task2
             string inputString = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                                  "Nulla quis cursus ipsum. Nunc maximus, erat sit amet " +
                                  "consequat aliquam, neque quam porta erat, nec lacinia.";
-            //Task1(inputString);
-            //Task2(inputString);
+            Task1(inputString);
+            Task2(inputString);
             Task3(inputString);
+            Task4(inputString);
         }
        
         static void Task1(string theString)
@@ -99,6 +100,21 @@ namespace HW._07_Task2
             }
             Console.WriteLine($"Число знаков препинания - {punctCounter}");
             Console.WriteLine($"Число букв - {letterCounter}");
+        }
+        static void Task4(string theString)
+        {
+            string[] stringArray = theString.Split(' ');
+            int[] mass = new int[stringArray.Length];
+            for (int i = 0; i < mass.Length; i++)
+            {
+                mass[i] = stringArray[i].Length;
+            }
+            Array.Sort(mass, stringArray);
+            Array.Reverse(stringArray);
+            foreach (string i in stringArray)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
