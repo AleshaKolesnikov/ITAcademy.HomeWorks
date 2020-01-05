@@ -21,15 +21,15 @@ namespace HW._08_Task2_AssemblyOne
         protected internal string piName = "protected internal";
         private protected string ppName = "private protected";
         //working with method
-        private void privateMethod()
-        {
-            Console.WriteLine("Hi");
-        }
+        private void privateMethod() { }
         public void publicMethod() { }
         internal void internalMethod() { }
         protected void protectedMethod() { }
         protected internal void piMethod() { }
         private protected void ppMethod() { }
+    }
+    class Developer : Employee 
+    {
 
     }
 }

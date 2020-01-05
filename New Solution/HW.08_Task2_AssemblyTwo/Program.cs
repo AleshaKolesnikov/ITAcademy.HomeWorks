@@ -6,7 +6,7 @@ namespace HW._08_Task2_AssemblyTwo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }

@@ -32,6 +32,22 @@ namespace HW._08_Task2_AssemblyOne
             //empl.privateMethod();
             //empl.protectedMethod();
             //empl.ppMethod();
+            
+            //Working with Inner Classes
+            Developer dev = new Developer();
+            int qinternalBirthDate = Developer.internalBirthDate;
+            int qPublicBirthDate = Developer.publicBirthDate;
+            int qpiBirthDate = dev.piBirthDate; //Константа вызывается через объект?!?
+            int qProtectedBirthDate = Developer.protectedBirthDate;
+            //int qPrivateBirthDate = Developer.privateBirthDate;
+            //int qppBirthDate = Developer.ppBirthDate;
+
+            string innerInternalName = dev.internalName;
+            string innerPublicName = dev.publicName;
+            string innerPIName = dev.piName;
+            string innerProtectedName = dev.protectedName;
+
         }
     }
+    
 }
