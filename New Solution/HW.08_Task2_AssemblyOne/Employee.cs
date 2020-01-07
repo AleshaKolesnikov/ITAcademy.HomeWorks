@@ -22,7 +22,7 @@ namespace HW._08_Task2_AssemblyOne
         private protected string ppName = "private protected";
         //working with method
         private void privateMethod() { }
-        public void publicMethod() { }
+        public void publicMethod() { Console.WriteLine(publicName); }
         internal void internalMethod() { }
         protected void protectedMethod() { }
         protected internal void piMethod() { }

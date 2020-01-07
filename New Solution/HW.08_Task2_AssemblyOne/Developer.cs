@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HW._08_Task2_AssemblyOne
 {
-    class Developer:Employee
+   public class Developer:Employee
     {
         void Main()
         {
