@@ -6,9 +6,9 @@ namespace HW._08_Task2_AssemblyOne
 {
     class Developer:Employee
     {
-        Developer developer = new Developer();
         void Main()
         {
+            Developer developer = new Developer();
             //в классе Developer можно использовать переменные, объявленные в классе Employee со всеми модификатроми кроме *private*
             int developerConstPublic = Developer.publicBirthDate;
             int developerConstInternal = Developer.internalBirthDate;
@@ -33,6 +33,12 @@ namespace HW._08_Task2_AssemblyOne
             developer.ppMethod();
             developer.piMethod();
             // модификатор private нельзя использовать, поскольку класс Developer - является вложенным.
+        }
+       internal void Display()
+        {
+            Developer developer = new Developer();
+            string developerField2 = developer.internalName;
+            Console.WriteLine(developerField2);
         }
     }
 }
