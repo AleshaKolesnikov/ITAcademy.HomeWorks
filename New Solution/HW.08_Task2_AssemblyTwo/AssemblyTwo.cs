@@ -2,7 +2,7 @@
 
 namespace HW._08_Task2_AssemblyTwo
 {
-    class Program
+    class AssemblyTwo
     {
         static void Main(string[] args)
         {

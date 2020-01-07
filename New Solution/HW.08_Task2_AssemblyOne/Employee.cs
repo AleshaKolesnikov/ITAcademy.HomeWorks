@@ -28,8 +28,4 @@ namespace HW._08_Task2_AssemblyOne
         protected internal void piMethod() { }
         private protected void ppMethod() { }
     }
-    class Developer : Employee 
-    {
-
-    }
 }
