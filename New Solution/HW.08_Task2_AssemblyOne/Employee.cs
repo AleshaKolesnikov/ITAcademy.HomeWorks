@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HW._08_Task2_AssemblyOne
 {
-    class Employee
+    public class Employee
     {
         //working with consts
         public const int publicBirthDate = 1993;

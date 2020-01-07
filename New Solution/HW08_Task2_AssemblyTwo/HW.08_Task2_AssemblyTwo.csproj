@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HW.08_Task2_AssemblyOne\HW.08_Task2_AssemblyOne.csproj" />
+  </ItemGroup>
+
 </Project>
