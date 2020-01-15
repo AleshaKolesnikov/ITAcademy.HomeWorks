@@ -13,10 +13,8 @@ namespace HW._08_Task2_AssemblyOne
             int developerConstPublic = Developer.publicBirthDate;
             int developerConstInternal = Developer.internalBirthDate;
             int developerConstProtected = Developer.protectedBirthDate;         //модификатор *protected* можно использовать во вложенном классе
-            int developerConstProtectedInternal = developer.piBirthDate;        // вызов константы через объект?!?!?!?
-            // int developerConstProtectedInternal = Developer.piBirthDate;     //а так нельзя
-            int developerConstPrivateProtected = developer.ppBirthDate;         //опять же не понимаю почему константу можно вызвать с помощью объекта
-            //int developerConstPrivateProtected = Developer.ppBirthDate;       //а так нельзя вызвать
+            int developerConstProtectedInternal = Developer.piBirthDate;
+            int developerConstPrivateProtected = Developer.ppBirthDate;
 
             //поля
             string developerField1 = developer.publicName;

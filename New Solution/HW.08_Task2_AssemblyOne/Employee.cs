@@ -11,8 +11,8 @@ namespace HW._08_Task2_AssemblyOne
         private const int privateBirthDate = 1994;
         protected const int protectedBirthDate = 1995;
         internal const int internalBirthDate = 1996;
-        protected internal int piBirthDate = 1997;
-        private protected int ppBirthDate = 1998;
+        protected internal const int piBirthDate = 1997;
+        private protected const int ppBirthDate = 1998;
         //working with variables
         public string publicName = "public";
         private string privateName = "private";

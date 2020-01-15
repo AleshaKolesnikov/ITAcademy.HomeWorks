@@ -15,8 +15,7 @@ namespace HW._08_Task2_AssemblyOne
 
             int publicConst = Employee.publicBirthDate;           
             int internalConst = Employee.internalBirthDate;   
-            // !!!!!!  int piConst = Employee.piBirthDate;        //Странно, что константы необходимо вызывать по имени класса, а здесь
-            int piConst = empl.piBirthDate;                       //модификатор protected internal позволяет работать только с объектом класса.
+            int piConst = Employee.piBirthDate;
             //int ppConst = Employee.ppBirthDate;       
             //int privateConst = Employee.privateBirthDate;       
             //int protectedConst = Employee.protectedBirthDate;
