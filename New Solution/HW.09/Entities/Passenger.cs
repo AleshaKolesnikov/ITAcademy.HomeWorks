@@ -7,9 +7,9 @@ namespace HW._09.Entities
     class Passenger
     {
         public string Name { get; set; }
-        internal string Passport { get; set; }
-        internal int Ticket { get; set; }
-        internal int Luggage { get; set; }
-        internal int HandLuggage{ get; set; }
+        public string Passport { get; set; }
+        public int Ticket { get; set; }
+        public int Luggage { get; set; }
+        public int HandLuggage{ get; set; }
     }
 }
