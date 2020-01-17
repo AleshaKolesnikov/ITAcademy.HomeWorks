@@ -8,7 +8,7 @@ namespace HW._09
         static void Main(string[] args)
         {
             Passenger passenger1 = new Passenger();
-            CheckIn check = new CheckIn();
+            //CheckIn check = new CheckIn();
             
             Greeting(passenger1);
 
@@ -17,7 +17,7 @@ namespace HW._09
         static void OnlineCheckinYesOrNo(Passenger passenger)
             {
             Console.WriteLine($"{passenger.Name}, Welcome to airport \"Perhaps you'll survive\"\n" +
-                                $"Did you pass \"check-in\" online? Tap \"Y\" or \"N\"");
+                                $"Did you pass \"check-in\" online? Tap \"Y\" for YES or \"N\" for NO");
         link1: char _clickedButton = Console.ReadKey(true).KeyChar;
             while (_clickedButton.ToString().ToUpper() != "Y" && _clickedButton.ToString().ToUpper() != "N")
             {
@@ -29,11 +29,11 @@ namespace HW._09
             {
                 case "Y":
                     Console.WriteLine("Использовать метод, с уже пройденной регистрацией");
-                    return;
+                    break;
                 case "N":
                     CheckIn check = new CheckIn();
                     check.Process(passenger);
-                    return;
+                    break;
                 default:
                     Console.WriteLine("Please, tap \"Y'\" or \"N\"");
                     break;
