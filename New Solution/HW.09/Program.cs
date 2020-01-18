@@ -8,11 +8,14 @@ namespace HW._09
         static void Main(string[] args)
         {
             Passenger passenger1 = new Passenger();
-            //CheckIn check = new CheckIn();
             
             Greeting(passenger1);
 
             OnlineCheckinYesOrNo(passenger1);
+
+            SecurityPass(passenger1);
+
+            PassportControlPass(passenger1);
         }
         static void OnlineCheckinYesOrNo(Passenger passenger)
             {
@@ -55,6 +58,18 @@ namespace HW._09
                 Console.WriteLine("Good Night! What is your name?");
 
             passenger.Name = Console.ReadLine();
+        }
+
+        static void SecurityPass(Passenger passenger)
+        {
+            Security security = new Security();
+            security.Process(passenger);
+        }
+
+        static void PassportControlPass (Passenger passenger)
+        {
+            PassportControl passpControl = new PassportControl();
+            passpControl.Process(passenger);
         }
     }
 }
