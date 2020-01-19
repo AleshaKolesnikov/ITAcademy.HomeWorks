@@ -15,6 +15,8 @@ namespace HW._10
             Ship ship = new Ship(draft, crew);
             Console.WriteLine(ship.IsWorthIt());
 
+            Person john = new Person("john",34);
+            Console.WriteLine($"{john.Info}"); 
         }
     }
 }
