@@ -17,10 +17,12 @@ namespace HW._09
 
             PassportControlPass(passenger1);
         }
+
         static void OnlineCheckinYesOrNo(Passenger passenger)
             {
             Console.WriteLine($"{passenger.Name}, Welcome to airport \"Perhaps you'll survive\"\n" +
                                 $"Did you pass \"check-in\" online? Tap \"Y\" for YES or \"N\" for NO");
+
         link1: char _clickedButton = Console.ReadKey(true).KeyChar;
             while (_clickedButton.ToString().ToUpper() != "Y" && _clickedButton.ToString().ToUpper() != "N")
             {

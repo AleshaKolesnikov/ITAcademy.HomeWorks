@@ -6,6 +6,7 @@ namespace HW._09.Entities
 {
     class CheckIn
     {
+        const int _maxLuggageWeight = 20;
         public void Process(Passenger passenger)
         {
             Console.WriteLine($"\n{passenger.Name}, You're in Check-in zone, please enter your passport data:");
@@ -13,10 +14,28 @@ namespace HW._09.Entities
 
             Console.WriteLine($"{passenger.Name}, Let's weight your luggage:");
             Random rnd = new Random();
-            passenger.Luggage = rnd.Next(1, 25);
-            Console.WriteLine($"Your luggage weight - {passenger.Luggage}kg.");
+            passenger.Luggage = rnd.Next(15, 25);
 
-            // Is it okey, or need I a *new Random();* for Ticket?
+            if (passenger.Luggage > _maxLuggageWeight)
+            {
+                Console.WriteLine($"{passenger.Name}, your luggage is {passenger.Luggage}kg, it's to big, Transfer surplus to hand luggage.");
+
+                Console.WriteLine("For transfering press any button.");
+                Console.ReadKey();
+
+                while (passenger.Luggage > _maxLuggageWeight)
+                {
+                    passenger.Luggage--;
+                    passenger.HandLuggage++;
+                }
+
+                Console.WriteLine($"Now your luggage is {passenger.Luggage}kg");
+            }
+            else
+            {
+                Console.WriteLine($"Your luggage is {passenger.Luggage}kg");
+            }
+
             passenger.Ticket = rnd.Next(1, 99);                       
             Console.WriteLine($"{passenger.Name}, here is your ticket #{passenger.Ticket}.");
 
