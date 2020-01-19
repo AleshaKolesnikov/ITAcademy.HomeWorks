@@ -16,7 +16,15 @@ namespace HW._10
             Console.WriteLine(ship.IsWorthIt());
 
             Person john = new Person("john",34);
-            Console.WriteLine($"{john.Info}"); 
+            Console.WriteLine($"{john.Info}");
+
+            Ball ballRegular = new Ball();
+            Ball ballSuper = new Ball("super");
+            Console.WriteLine($"ballRegular.ballType - {ballRegular.ballType}\nballSuper.ballType - {ballSuper.ballType}");
+
+            Block block = new Block(new int[] { 2, 4, 6 });
+            Console.WriteLine($"{block.GetHeight()}\n{block.GetLength()}\n{block.GetWidth()}\n" +
+                              $"{block.GetVolume()}\n{block.GetSurfaceArea()}");
         }
     }
 }
