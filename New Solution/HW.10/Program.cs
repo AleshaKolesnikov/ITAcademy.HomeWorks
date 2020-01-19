@@ -15,7 +15,7 @@ namespace HW._10
             Ship ship = new Ship(draft, crew);
             Console.WriteLine(ship.IsWorthIt());
 
-            Person john = new Person("john",34);
+            Person john = new Person("john", 34);
             Console.WriteLine($"{john.Info}");
 
             Ball ballRegular = new Ball();
@@ -25,6 +25,15 @@ namespace HW._10
             Block block = new Block(new int[] { 2, 4, 6 });
             Console.WriteLine($"{block.GetHeight()}\n{block.GetLength()}\n{block.GetWidth()}\n" +
                               $"{block.GetVolume()}\n{block.GetSurfaceArea()}");
+
+            int[] _integerArray = new int[] { 1, 2, 3, 4, 5, 4, 2, 1, 4 };
+            int[] _valuesInteger = new int[] { 1, 2, 3 };
+            int[] resultArray = Kata.Remove(_integerArray, _valuesInteger);
+
+            foreach (int i in resultArray)
+            { 
+                Console.WriteLine(i); 
+            }
         }
     }
 }
