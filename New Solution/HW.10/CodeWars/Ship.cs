@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HW._10.CodeWars
 {
-    //Link - https://www.codewars.com/kata/54fe05c4762e2e3047000add/train/csharp
+    //Link - https://www.codewars.com/kata/54fe05c4762e2e3047000add
     //You are a leader of a small pirate crew. And you have a plan. 
     //With the help of OOP you wish to make a pretty efficient system to identify ships with a heavy booty on board.
     public class Ship
