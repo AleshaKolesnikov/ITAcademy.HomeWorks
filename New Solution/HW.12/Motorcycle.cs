@@ -6,16 +6,22 @@ namespace HW._12
 {
     class Motorcycle
     {
+        static int _counter;
         int Id { get; set; }
         string Name { get; set; }
         string Model { get; set; }
         int Year { get; set; }
         int Odometer { get; set; }
 
-        public static Motorcycle CreateMotorcycle(int ID, string name, string model, int year, int odometer)
+        public Motorcycle()
+        {
+            _counter++;
+        }
+
+        public static Motorcycle CreateMotorcycle(string name, string model, int year, int odometer)
         {
             Motorcycle moto = new Motorcycle();
-            moto.Id = ID;
+            moto.Id = _counter;
             moto.Name = name;
             moto.Model = model;
             moto.Year = year;
@@ -39,9 +45,9 @@ namespace HW._12
             else Console.WriteLine("Motorcycle not set or deleted\n");
         }
 
-        public static Motorcycle UpdateMotorcycle(Motorcycle moto, int odometer)
+        public static Motorcycle UpdateMotorcycle(Motorcycle moto, int addedKM)
         {
-            moto.Odometer = odometer;
+            moto.Odometer += addedKM;
             return moto;
         }
 
