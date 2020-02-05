@@ -6,4 +6,8 @@
     <RootNamespace>HW._12</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+  </ItemGroup>
+
 </Project>
