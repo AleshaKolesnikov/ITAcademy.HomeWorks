@@ -16,7 +16,6 @@ namespace HW._12
         public Motorcycle()
         {
             _counter++;
-            Logger.InitLogger();
             Logger.Log.Info($"Created a Motorcycle Number {_counter}");
         }
 
@@ -28,7 +27,6 @@ namespace HW._12
             moto.Model = model;
             moto.Year = year;
             moto.Odometer = odometer;
-            Logger.InitLogger();
             Logger.Log.Info($"Motorcycle Number {_counter} is {moto.Name} - " +
                             $"{moto.Model} from {moto.Year} with {moto.Odometer}km on Odometer");
             return moto;
@@ -36,7 +34,6 @@ namespace HW._12
 
         public static Motorcycle DeleteMotorcycle(ref Motorcycle moto)
         {
-            Logger.InitLogger();
             Logger.Log.Info($"Motorcycle Number {_counter} deleted");
             moto = null;
             return moto;
@@ -48,8 +45,7 @@ namespace HW._12
             {
                 Console.WriteLine($"ID - {moto.Id};\nName - {moto.Name};\n" +
                     $"Model - {moto.Model};\nYear - {moto.Year};\nOdometer - {moto.Odometer}\n");
-                Logger.InitLogger();
-                Logger.Log.Info($"Inputing motorcycle on console.");
+                Logger.Log.Info($"Inputing motorcycle No.{_counter} on console.");
             }
             else Console.WriteLine("Motorcycle not set or deleted\n");
         }
@@ -57,14 +53,12 @@ namespace HW._12
         public static Motorcycle UpdateMotorcycle(Motorcycle moto, int addedKM)
         {
             moto.Odometer += addedKM;
-            Logger.InitLogger();
             Logger.Log.Info($"In Moto No.{_counter} changed Odometer to {moto.Odometer}");
             return moto;
         }
 
         public static void GetMotorcycleById(Motorcycle[] motos, int ID)
         {
-            Logger.InitLogger();
             Logger.Log.Info($"Trying to find Motorcycle with ID - {ID}");
             Motorcycle comparedMoto = null;
             for (int i = 0; i < motos.Length; i++)
@@ -77,8 +71,10 @@ namespace HW._12
                 }
             }
                 if (comparedMoto == null)
-                    Logger.Log.Info($"Search Failed");
-                    Console.WriteLine("Not found. Perhaps, specified ID don't exist");
+            {
+                Logger.Log.Info($"Search Failed");
+                Console.WriteLine("Not found. Perhaps, specified ID don't exist");
+            }
         }
     }
 }
